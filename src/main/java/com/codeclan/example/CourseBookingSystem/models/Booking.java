@@ -65,4 +65,5 @@ public class Booking {
     public void setId(Long id) {
         Id = id;
     }
+
 }

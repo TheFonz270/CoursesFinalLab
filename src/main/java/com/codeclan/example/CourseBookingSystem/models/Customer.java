@@ -79,4 +79,8 @@ public class Customer {
     public void setId(Long id) {
         Id = id;
     }
+
+    public void setBookings(List<Booking> bookings) {
+        this.bookings = bookings;
+    }
 }

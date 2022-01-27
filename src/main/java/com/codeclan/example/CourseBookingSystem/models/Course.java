@@ -15,7 +15,7 @@ public class Course {
     @Column(name = "town")
     private String town;
     @Column(name = "rating")
-    private int star_rating;
+    private int rating;
 
     @JsonIgnoreProperties({"course"})
     @JsonBackReference
@@ -27,10 +27,10 @@ public class Course {
     @Column(name = "id")
     private Long Id;
 
-    public Course(String name, String town, int star_rating) {
+    public Course(String name, String town, int rating) {
         this.name = name;
         this.town = town;
-        this.star_rating = star_rating;
+        this.rating = rating;
         this.bookings = new ArrayList<>();
     }
 
@@ -54,12 +54,12 @@ public class Course {
         this.town = town;
     }
 
-    public int getStar_rating() {
-        return star_rating;
+    public int getRating() {
+        return rating;
     }
 
-    public void setStar_rating(int star_rating) {
-        this.star_rating = star_rating;
+    public void setRating(int _rating) {
+        rating = _rating;
     }
 
     public Long getId() {
@@ -72,5 +72,13 @@ public class Course {
 
     public void addBooking(Booking booking) {
         bookings.add(booking);
+    }
+
+    public List<Booking> getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(List<Booking> bookings) {
+        this.bookings = bookings;
     }
 }
